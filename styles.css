@@ -19,7 +19,7 @@ a:hover {
     color: #175CD3;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, p {
     font-family: "Inter", sans-serif;
 }
 
@@ -27,18 +27,42 @@ h1, h2 {
     color: #181D27;
 }
 
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+h3 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #175CD3;
+}
+
 p {
     color: #414651;
+    font-size: 18px;
 }
 
 .nav {
     padding: 16px 64px;
+    background-color: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,.97);
+    z-index: 2;
 }
 
 .nav-content {
     display: flex;
     align-items: center;
     gap: 32px;
+    background-color: none;
 }
 
 .logo {
@@ -47,30 +71,33 @@ p {
 
 .hero {
     display: flex;
+    align-items: center;
+    align-content: center;
     padding: 64px;
     gap: 56px;
-    margin-bottom: 104px;
+    margin: 64px auto 104px auto;
+    max-width: 1600px;
 } 
 
 .left-content {
     flex: 40;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 40px;
     align-items: flex-start
 }
 
 .right-content {
     flex: 60;
-}
-
-h2 {
-    text-align: center;
-    font-size: 26px;
+    filter: drop-shadow(
+        4px 8px 8px hsl(0, 0%, 80%)
+      );
 }
 
 .features {
     padding-top: 64px;
+    margin: 64px auto 104px auto;
+    max-width: 1600px;
 }
 
 .card-container {
@@ -114,30 +141,45 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 64px;
-    border: 4px solid #53B1FD;
-    background-color: #B2DDFF;
-    color: #1849A9;
+    padding: 48px 48px;
+    border: 4px solid #D1E9FF; 
+    background: linear-gradient(
+    to bottom right,
+      #F5FAFF,
+      #EFF8FF,
+      #D1E9FF
+    );
     border-radius: 16px;
 }
 
+.cta-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1570EF;
+}
+
 button {
-    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
     border-radius: 8px;
     border: none;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .btn-cta {
-color: #175CD3;
-background-color: white;
+    color: #175CD3;
+    background-color: white;
+    transition: color 0.2s ease;
 }
 
 .btn-cta:hover {
-    background-color: #EFF8FF;
-    color: #1849A9;
+    background-color: #1570EF;
+    color: #F5FAFF;
 }
 
 .btn-hero {
@@ -148,17 +190,6 @@ background-color: white;
 .btn-hero:hover {
     background-color: #B2DDFF;
     color: #1849A9;
-}
-
-h3 {
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 14px;
-    font-weight: 500;
 }
 
 .footer {
@@ -178,6 +209,11 @@ h4 {
   }
 
 .footer-link {
-   color: #175CD3;
+   color: #1570EF;
   }
+
+.footer-link:hover {
+    color: #175CD3;
+}
+
   
